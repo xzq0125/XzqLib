@@ -33,3 +33,8 @@ tasks.withType(Javadoc) {
         links "http://docs.oracle.com/javase/7/docs/api"
     }
 }
+
+ext {
+    userOrg = 'xzq'
+    groupId = 'com.xzq'
+}

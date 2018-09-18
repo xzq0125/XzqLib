@@ -225,6 +225,11 @@ public class DividerLinearLayout extends LinearLayout {
         return showThisIndex(index) && hasDividerBeforeChildAt(index);
     }
 
+    /**
+     * 设置不需要分割线的索引列表
+     *
+     * @param list 索引列表
+     */
     public void setNonDividerIndexes(List<String> list) {
         if (list == null || list.isEmpty()) {
             return;
@@ -233,6 +238,11 @@ public class DividerLinearLayout extends LinearLayout {
         invalidate();
     }
 
+    /**
+     * 设置不需要分割线的索引
+     *
+     * @param indexes 索引
+     */
     public void setNonDividerIndexes(String... indexes) {
         if (indexes == null || indexes.length == 0) {
             return;
@@ -240,6 +250,11 @@ public class DividerLinearLayout extends LinearLayout {
         setNonDividerIndexes(Arrays.asList(indexes));
     }
 
+    /**
+     * 设置不需要分割线的索引
+     *
+     * @param indexes 索引
+     */
     public void setNonDividerIndexes(Integer... indexes) {
         if (indexes == null || indexes.length == 0) {
             return;
