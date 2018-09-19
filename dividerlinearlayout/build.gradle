@@ -1,39 +1,17 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.novoda.bintray-release'//添加
 
 android {
     compileSdkVersion 27
-
-
-
     defaultConfig {
         minSdkVersion 14
         targetSdkVersion 27
         versionCode 1
-        versionName "1.0"
-
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
+        versionName "1.0.1"
     }
-
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
-    }
-
 }
+
 dependencies {
     implementation 'com.android.support:appcompat-v7:27.1.1'
 }
 
-//添加
-publish {
-    userOrg = rootProject.ext.userOrg
-    groupId = rootProject.ext.groupId
-    artifactId = 'dividerlinearlayout'
-    publishVersion = '1.0.1'
-    desc = 'An optional Linearlayout for dividing lines'
-    website = 'https://github.com/xzq0125/XzqLib'
-}
+apply from: "bintray.gradle"
