@@ -7,7 +7,7 @@ import android.widget.AdapterView;
 import android.widget.Spinner;
 
 import com.xzq.dividerlinearlayout.DividerLinearLayout;
-import com.xzq.lib.BaseActivity;
+import com.xzq.lib.base.BaseActivity;
 import com.xzq.lib.R;
 
 import java.util.ArrayList;

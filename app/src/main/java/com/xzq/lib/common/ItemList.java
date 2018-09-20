@@ -1,4 +1,4 @@
-package com.xzq.lib;
+package com.xzq.lib.common;
 
 import android.content.Context;
 import android.content.Intent;
@@ -61,7 +61,6 @@ public class ItemList {
     }
 
     private void initItemCount() {
-        itemList.add(new Item("DividerLinearLayout", R.layout.activity_dividerlinearlayout));
         itemList.add(new Item("可去除分割线的LinearLayout", DividerLinearLayoutActivity.class));
     }
 

@@ -1,4 +1,4 @@
-package com.xzq.lib;
+package com.xzq.lib.base;
 
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;
@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
+import com.xzq.lib.R;
 import com.xzq.lib.utils.LogUtils;
 
 /**

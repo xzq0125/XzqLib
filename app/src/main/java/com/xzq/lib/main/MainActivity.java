@@ -1,4 +1,4 @@
-package com.xzq.lib;
+package com.xzq.lib.main;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -6,6 +6,10 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+
+import com.xzq.lib.common.ItemList;
+import com.xzq.lib.R;
+import com.xzq.lib.base.BaseActivity;
 
 import java.util.Map;
 

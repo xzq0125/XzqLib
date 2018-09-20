@@ -1,7 +1,9 @@
-package com.xzq.lib;
+package com.xzq.lib.common;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+
+import com.xzq.lib.base.BaseActivity;
 
 public class CommonActivity extends BaseActivity {
 
