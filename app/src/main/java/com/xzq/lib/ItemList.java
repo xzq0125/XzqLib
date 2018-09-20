@@ -4,6 +4,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.LayoutRes;
 
+import com.xzq.lib.biz.DividerLinearLayoutActivity;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -60,6 +62,7 @@ public class ItemList {
 
     private void initItemCount() {
         itemList.add(new Item("DividerLinearLayout", R.layout.activity_dividerlinearlayout));
+        itemList.add(new Item("可去除分割线的LinearLayout", DividerLinearLayoutActivity.class));
     }
 
 }

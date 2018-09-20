@@ -16,7 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CommonActivity"></activity>
+        <activity android:name=".CommonActivity" />
+        <activity android:name=".biz.DividerLinearLayoutActivity"></activity>
     </application>
 
 </manifest>
