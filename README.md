@@ -8,9 +8,9 @@
 [1]: https://github.com/xzq0125/XzqLib/tree/master/dividerlinearlayout
 
 
-- ***[DrawableTextView][1]***
+- ***[DrawableTextView][2]***
 
 一个可以设置上下左右drawable固定宽高的TextView
 
-[1]: https://github.com/xzq0125/XzqLib/tree/master/drawabletextview
+[2]: https://github.com/xzq0125/XzqLib/tree/master/drawabletextview
 
