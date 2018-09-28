@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.support.annotation.LayoutRes;
 
 import com.xzq.lib.biz.DividerLinearLayoutActivity;
+import com.xzq.lib.biz.DrawableTextViewActivity;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -62,6 +63,7 @@ public class ItemList {
 
     private void initItemCount() {
         itemList.add(new Item("可去除分割线的LinearLayout", DividerLinearLayoutActivity.class));
+        itemList.add(new Item("DrawableTextView", DrawableTextViewActivity.class));
     }
 
 }

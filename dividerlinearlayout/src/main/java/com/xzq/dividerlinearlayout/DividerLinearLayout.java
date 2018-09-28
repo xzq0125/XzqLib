@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;
-import android.support.v4.view.ViewCompat;
+import android.support.v7.widget.ViewUtils;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.View;
@@ -112,7 +112,7 @@ public class DividerLinearLayout extends LinearLayout {
 
     void drawDividersHorizontal(Canvas canvas) {
         final int count = getChildCount();
-        final boolean isLayoutRtl = isLayoutRtl(this);
+        final boolean isLayoutRtl = ViewUtil.isLayoutRtl(this);
         for (int i = 0; i < count; i++) {
             final View child = getChildAt(i);
             if (child != null && child.getVisibility() != GONE) {
@@ -290,10 +290,6 @@ public class DividerLinearLayout extends LinearLayout {
             previousHide = a.getBoolean(R.styleable.DividerLinearLayout_Layout_layout_divider_previous_hide, false);
             a.recycle();
         }
-    }
-
-    public static boolean isLayoutRtl(View view) {
-        return ViewCompat.getLayoutDirection(view) == ViewCompat.LAYOUT_DIRECTION_RTL;
     }
 
 }

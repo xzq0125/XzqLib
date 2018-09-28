@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.xzq.lib.biz.DrawableTextViewActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <com.xzq.drawabletextview.DrawableTextView
+        android:id="@+id/drawableTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:background="@color/colorAccent"
+        android:drawablePadding="10dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="DrawableTextView"
+        android:textColor="@android:color/white"
+        android:textSize="19sp"
+        app:drawableBottom="@mipmap/ic_launcher"
+        app:drawableHeight="10dp"
+        app:drawableLeft="@mipmap/ic_launcher"
+        app:drawableRight="@mipmap/ic_launcher"
+        app:drawableTop="@mipmap/ic_launcher"
+        app:drawableWidth="10dp"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorAccent"
+        android:drawableBottom="@mipmap/ic_launcher"
+        android:drawableLeft="@mipmap/ic_launcher"
+        android:drawablePadding="10dp"
+        android:drawableRight="@mipmap/ic_launcher"
+        android:drawableTop="@mipmap/ic_launcher"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="TextView"
+        android:textColor="@android:color/white"
+        android:textSize="19sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/drawableTextView"
+        app:layout_constraintVertical_bias="0.173" />
+
+</android.support.constraint.ConstraintLayout>

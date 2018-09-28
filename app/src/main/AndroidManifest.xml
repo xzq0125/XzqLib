@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".common.CommonActivity" />
-        <activity android:name=".biz.DividerLinearLayoutActivity"></activity>
+        <activity android:name=".biz.DividerLinearLayoutActivity" />
+        <activity android:name=".biz.DrawableTextViewActivity"></activity>
     </application>
 
 </manifest>
