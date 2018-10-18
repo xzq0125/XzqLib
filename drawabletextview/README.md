@@ -44,9 +44,13 @@ DrawableTextView可以给drawable设置指定的宽高
 - Java代码
 ```
        public void setDrawableLeft(Drawable drawableLeft, int drawableWidth, int drawableHeight)
+
        public void setDrawableTop(Drawable drawableLeft, int drawableWidth, int drawableHeight)
+
        public void setDrawableRight(Drawable drawableLeft, int drawableWidth, int drawableHeight)
+
        public void setDrawableBottom(Drawable drawableLeft, int drawableWidth, int drawableHeight)
+       
        public void setCompoundDrawables(@Nullable Drawable left, @Nullable Drawable top,
                                             @Nullable Drawable right, @Nullable Drawable bottom,
                                             int drawableWidth, int drawableHeight)

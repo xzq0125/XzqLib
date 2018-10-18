@@ -42,7 +42,7 @@ DividerLinearLayout可以减少布局层次结构，可以减少子View数目，
         android:orientation="vertical"
         android:showDividers="middle|beginning|end"
         android:visibility="visible"
-        app:non_divider_indexes="1">
+        app:dll_non_divider_indexes="1">
 
         <TextView
             android:layout_width="match_parent"
