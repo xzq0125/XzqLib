@@ -1,10 +1,10 @@
 
 
-## 一个可以设置上下左右drawable固定宽高的TextView
+## 一个可以设置上下左右drawable指定宽高的TextView
 
-如下图，drawable的大小超过了我们预期的大小，因为TextView的drawableXXX的大小是包裹内容
+如下图，图片的大小超过了我们预期的大小，因为TextView的drawableXXX的大小是包裹内容
 
-DrawableTextView可以给drawable设置大小
+DrawableTextView可以给drawable设置指定的宽高
 
 
 ## 效果图
@@ -14,7 +14,7 @@ DrawableTextView可以给drawable设置大小
 ## 引用
 
     dependencies {
-        compile 'com.xzq:drawabletextview:1.0.0'
+        compile 'xzq.widget:drawabletextview:1.0.0'
     }
 
 
@@ -33,27 +33,33 @@ DrawableTextView可以给drawable设置大小
            android:text="DrawableTextView"
            android:textColor="@android:color/white"
            android:textSize="19sp"
-           app:drawableBottom="@mipmap/ic_launcher"
-           app:drawableHeight="10dp"
-           app:drawableLeft="@mipmap/ic_launcher"
-           app:drawableRight="@mipmap/ic_launcher"
-           app:drawableTop="@mipmap/ic_launcher"
-           app:drawableWidth="10dp" />
+           app:dtv_drawableBottom="@mipmap/ic_launcher"
+           app:dtv_drawableHeight="10dp"
+           app:dtv_drawableLeft="@mipmap/ic_launcher"
+           app:dtv_drawableRight="@mipmap/ic_launcher"
+           app:dtv_drawableTop="@mipmap/ic_launcher"
+           app:dtv_drawableWidth="10dp" />
 ```    
     
 - Java代码
 ```
-       暂不支持
+       public void setDrawableLeft(Drawable drawableLeft, int drawableWidth, int drawableHeight)
+       public void setDrawableTop(Drawable drawableLeft, int drawableWidth, int drawableHeight)
+       public void setDrawableRight(Drawable drawableLeft, int drawableWidth, int drawableHeight)
+       public void setDrawableBottom(Drawable drawableLeft, int drawableWidth, int drawableHeight)
+       public void setCompoundDrawables(@Nullable Drawable left, @Nullable Drawable top,
+                                            @Nullable Drawable right, @Nullable Drawable bottom,
+                                            int drawableWidth, int drawableHeight)
 ```
 ## 属性及方法说明
 xml布局属性|默认值|属性类型|对应方法|说明及使用
 ---|---|---|---|---
-app:drawableLeft|null|引用|null|设置图片在文字的左边
-app:drawableRight|null|引用|null|设置图片在文字的右边
-app:drawableTop|null|引用|null|设置图片在文字的顶部
-app:drawableBottom|null|引用|null|设置图片在文字的底部
-app:drawableWidth|0|dimension|null|设置图片的宽度
-app:drawableHeight|0|dimension|null|设置图片的高度
+app:dtv_drawableLeft|null|引用|null|设置图片在文字的左边
+app:dtv_drawableRight|null|引用|null|设置图片在文字的右边
+app:dtv_drawableTop|null|引用|null|设置图片在文字的顶部
+app:dtv_drawableBottom|null|引用|null|设置图片在文字的底部
+app:dtv_drawableWidth|0|dimension|null|设置图片的宽度
+app:dtv_drawableHeight|0|dimension|null|设置图片的高度
 
 
 

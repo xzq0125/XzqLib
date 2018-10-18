@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="DividerLinearLayout_Layout">
-        <attr name="layout_divider_previous_hide" format="boolean" />
-        <attr name="non_divider_indexes" format="string" />
+        <attr name="dll_layout_divider_previous_hide" format="boolean" />
+        <attr name="dll_non_divider_indexes" format="string" />
     </declare-styleable>
 </resources>

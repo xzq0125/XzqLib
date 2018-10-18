@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;
-import android.support.v7.widget.ViewUtils;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.View;
@@ -42,7 +41,7 @@ public class DividerLinearLayout extends LinearLayout {
 
     private void init(Context context, AttributeSet attrs) {
         TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.DividerLinearLayout_Layout);
-        String nonDividerItems = a.getString(R.styleable.DividerLinearLayout_Layout_non_divider_indexes);
+        String nonDividerItems = a.getString(R.styleable.DividerLinearLayout_Layout_dll_non_divider_indexes);
         if (!TextUtils.isEmpty(nonDividerItems)) {
             String[] split;
             if (nonDividerItems.contains(",")) {
@@ -287,7 +286,7 @@ public class DividerLinearLayout extends LinearLayout {
             super(c, attrs);
             TypedArray a =
                     c.obtainStyledAttributes(attrs, R.styleable.DividerLinearLayout_Layout);
-            previousHide = a.getBoolean(R.styleable.DividerLinearLayout_Layout_layout_divider_previous_hide, false);
+            previousHide = a.getBoolean(R.styleable.DividerLinearLayout_Layout_dll_layout_divider_previous_hide, false);
             a.recycle();
         }
     }

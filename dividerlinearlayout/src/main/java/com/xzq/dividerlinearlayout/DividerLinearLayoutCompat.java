@@ -40,7 +40,7 @@ public class DividerLinearLayoutCompat extends LinearLayoutCompat {
 
     private void init(Context context, AttributeSet attrs) {
         TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.DividerLinearLayout_Layout);
-        String nonDividerItems = a.getString(R.styleable.DividerLinearLayout_Layout_non_divider_indexes);
+        String nonDividerItems = a.getString(R.styleable.DividerLinearLayout_Layout_dll_non_divider_indexes);
         if (!TextUtils.isEmpty(nonDividerItems)) {
             String[] split;
             if (nonDividerItems.contains(",")) {
@@ -283,7 +283,7 @@ public class DividerLinearLayoutCompat extends LinearLayoutCompat {
             super(c, attrs);
             TypedArray a =
                     c.obtainStyledAttributes(attrs, R.styleable.DividerLinearLayout_Layout);
-            previousHide = a.getBoolean(R.styleable.DividerLinearLayout_Layout_layout_divider_previous_hide, false);
+            previousHide = a.getBoolean(R.styleable.DividerLinearLayout_Layout_dll_layout_divider_previous_hide, false);
             a.recycle();
         }
     }
