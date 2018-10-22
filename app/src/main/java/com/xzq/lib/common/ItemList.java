@@ -4,8 +4,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.LayoutRes;
 
-import com.xzq.lib.biz.DividerLinearLayoutActivity;
-import com.xzq.lib.biz.DrawableTextViewActivity;
+import com.xzq.lib.biz.divider.DividerActivity;
+import com.xzq.lib.biz.divider_linearlayout.DividerLinearLayoutActivity;
+import com.xzq.lib.biz.drawable_text_view.DrawableTextViewActivity;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -64,6 +65,7 @@ public class ItemList {
     private void initItemCount() {
         itemList.add(new Item("可去除分割线的LinearLayout", DividerLinearLayoutActivity.class));
         itemList.add(new Item("DrawableTextView", DrawableTextViewActivity.class));
+        itemList.add(new Item("RecyclerView分割线", DividerActivity.class));
     }
 
 }

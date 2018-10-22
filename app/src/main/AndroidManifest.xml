@@ -3,6 +3,7 @@
     package="com.xzq.lib">
 
     <application
+        android:name=".App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -17,8 +18,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".common.CommonActivity" />
-        <activity android:name=".biz.DividerLinearLayoutActivity" />
-        <activity android:name=".biz.DrawableTextViewActivity"></activity>
+        <activity android:name=".biz.divider_linearlayout.DividerLinearLayoutActivity" />
+        <activity android:name=".biz.drawable_text_view.DrawableTextViewActivity" />
+        <activity android:name=".biz.divider.DividerActivity"></activity>
     </application>
 
 </manifest>

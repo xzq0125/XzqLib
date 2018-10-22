@@ -7,4 +7,17 @@
         <item>3</item>
         <item>4</item>
     </string-array>
+    <string-array name="divider_indexes">
+        <item>vertical</item>
+        <item>horizontal</item>
+    </string-array>
+    <string-array name="divider_indexes2">
+        <item>red</item>
+        <item>green</item>
+        <item>blue</item>
+    </string-array>
+    <string-array name="divider_indexes3">
+        <item>最后的Item有分割线（默认）</item>
+        <item>最后的Item没有分割线</item>
+    </string-array>
 </resources>

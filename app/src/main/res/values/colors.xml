@@ -9,4 +9,7 @@
     <color name="white">#ffffffff</color>
     <color name="black">#ff000000</color>
     <color name="transparent">#00000000</color>
+
+    <!-- 分割线 -->
+    <color name="color_divider">#e6e6e6</color>
 </resources>

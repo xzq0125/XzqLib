@@ -32,6 +32,11 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
     }
 
     @Override
+    protected String getGithubUrl() {
+        return null;
+    }
+
+    @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         Object data = adapter.getItem(position);
         if (data instanceof Map) {

@@ -1,4 +1,4 @@
-package com.xzq.lib.biz;
+package com.xzq.lib.biz.divider_linearlayout;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -44,6 +44,11 @@ public class DividerLinearLayoutActivity extends BaseActivity {
         //2、
         dividerLinearLayout.setNonDividerIndexes("0", "1");
         dividerLinearLayout.setNonDividerIndexes(0, 1);
+    }
+
+    @Override
+    protected String getGithubUrl() {
+        return "https://github.com/xzq0125/XzqLib/tree/master/dividerlinearlayout";
     }
 
 }

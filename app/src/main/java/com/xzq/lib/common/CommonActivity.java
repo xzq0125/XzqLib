@@ -16,4 +16,9 @@ public class CommonActivity extends BaseActivity {
     protected void initViews(@Nullable Bundle savedInstanceState) {
 
     }
+
+    @Override
+    protected String getGithubUrl() {
+        return null;
+    }
 }

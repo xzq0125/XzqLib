@@ -1,1 +1,1 @@
-include ':app', ':dividerlinearlayout', ':drawabletextview'
+include ':app', ':dividerlinearlayout', ':drawabletextview', ':divider'
