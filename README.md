@@ -14,3 +14,10 @@
 
 [2]: https://github.com/xzq0125/XzqLib/tree/master/drawabletextview
 
+
+- ***[Divider][3]***
+
+一行代码搞定RecyclerView的分割线
+
+[3]: https://github.com/xzq0125/XzqLib/tree/master/divider
+
