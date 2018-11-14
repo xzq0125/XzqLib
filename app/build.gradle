@@ -29,4 +29,5 @@ dependencies {
     implementation project(':dividerlinearlayout')
     implementation project(':drawabletextview')
     implementation project(':divider')
+    implementation project(':xtimber')
 }

@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/XzqLib.iml" filepath="$PROJECT_DIR$/XzqLib.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/divider/divider.iml" filepath="$PROJECT_DIR$/divider/divider.iml" />
       <module fileurl="file://$PROJECT_DIR$/dividerlinearlayout/dividerlinearlayout.iml" filepath="$PROJECT_DIR$/dividerlinearlayout/dividerlinearlayout.iml" />
       <module fileurl="file://$PROJECT_DIR$/drawabletextview/drawabletextview.iml" filepath="$PROJECT_DIR$/drawabletextview/drawabletextview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xtimber/xtimber.iml" filepath="$PROJECT_DIR$/xtimber/xtimber.iml" />
       <module fileurl="file://$PROJECT_DIR$/xzq.iml" filepath="$PROJECT_DIR$/xzq.iml" />
     </modules>
   </component>

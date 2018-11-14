@@ -12,7 +12,7 @@ import android.view.View;
 
 import com.xzq.lib.R;
 import com.xzq.lib.utils.AppUtils;
-import com.xzq.lib.utils.LogUtils;
+import com.xzq.xtimber.XTimber;
 
 /**
  * BaseActivity
@@ -24,7 +24,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        LogUtils.debug("BaseActivity", getClass().getSimpleName());
+        XTimber.d(getClass().getSimpleName());
         final int layoutId = getLayoutId();
         if (layoutId > 0) {
             setContentView(layoutId);
