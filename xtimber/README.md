@@ -1,11 +1,14 @@
 
 
 ## 本库是通过扩展JakeWharton（J神）的Timber库，Timber的[github](https://github.com/JakeWharton/timber)
-    J神是这样介绍Timber的，Logging for lazy people. 翻译过来就是懒人日志，这个懒主要体现在，相比官方的Log不用再设置TAG，
-    Timber会自动的把当前调用类作为默认的TAG，当然了，也可以手动设置TAG；XTimber在此基础上仅仅增加了一个定位到调用类的功能。
+
+   J神是这样介绍Timber的，Logging for lazy people. 翻译过来就是懒人日志，这个懒主要体现在，相比官方的Log不用再设置TAG，
+
+   Timber会自动的把当前调用类作为默认的TAG，当然了，也可以手动设置TAG；XTimber在此基础上仅仅增加了一个定位到调用类的功能。
+
 ## XTimber的特点
 - 自动设置TAG
-- 接收Throwable异常信息
+- 接收Throwable异常信息（内部自动把Throwable转换为String）
 - 方便查看并定位到日志输出位置
 
 
@@ -14,13 +17,13 @@
 
 ![Screenshots](https://github.com/xzq0125/XzqLib/blob/master/xtimber/xtimber1.jpg)
 
-下面是输出的日志,下面的截图是配置了MethodLocation模式的效果图
+下面是输出的日志,MethodLocation.FULL模式
 
 ![Screenshots](https://github.com/xzq0125/XzqLib/blob/master/xtimber/xtimber2.jpg)
 
    - 第一行是官方`Log.d(tag,msg)`输出的日志
-   - 第二行是官方`XTimber.d(msg)`输出的日志
-   - 第三行是官方`XTimber.e(throwable)`输出的日志
+   - 第二行是`XTimber.d(msg)`输出的日志
+   - 第三行是`XTimber.e(throwable)`输出的日志
 
    点击第二行`(BaseActivity.java:32)`可以将光标定位到BaseActivity类的32行处
 
@@ -55,11 +58,11 @@ Application里初始化
                  */
                 @Override
                 protected MethodLocation methodLocation() {
-                    //不输出方法位置，此模式输出的日志跟官方Log一样
+                    //1、不输出方法路劲，此模式输出的日志跟官方Log一样
                     //return MethodLocation.NONE;
-                    //只输出方法名称
+                    //2、只输出方法名称
                     //return MethodLocation.METHOD;
-                    //显示方法的全路径(默认模式)
+                    //3、显示方法的全路径(默认模式)
                     return MethodLocation.FULL;
                 }
             });
@@ -73,8 +76,8 @@ Application里初始化
  ```
    手动设置TAG
 ```
- XTimber.tag("TAG");
- XTimber.d("msg");
+ XTimber.tag("TAG");//设置TAG
+ XTimber.d("msg");//输出msg
 
  输出：11-14 18:11:19.584 15439-15439/com.xzq.lib D/TAG: at	com.xzq.lib.base.BaseActivity.onCreate(BaseActivity.java:33)	msg
 ```
