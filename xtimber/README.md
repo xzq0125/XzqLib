@@ -27,7 +27,7 @@
 
    点击第二行`(BaseActivity.java:32)`可以将光标定位到BaseActivity类的32行处
 
-## 引用
+## 引用（暂不支持）
 
     dependencies {
         implementation 'xzq.util:xtimber:1.0.0'

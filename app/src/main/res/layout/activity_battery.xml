@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".biz.battery.BatteryActivity">
+
+    <include layout="@layout/layout_toolbar" />
+
+    <com.xzq.battery.BatteryView
+        android:id="@+id/batteryView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="200dp"
+        app:bv_body_color="@color/black"
+        app:bv_body_rx="1dp"
+        app:bv_body_ry="1dp"
+        app:bv_lid_color="@color/black"
+        app:bv_lid_height="12dp"
+        app:bv_lid_margin_left="3dp"
+        app:bv_lid_rx="1dp"
+        app:bv_lid_ry="1dp"
+        app:bv_lid_width="4dp"
+        app:bv_power_color="@color/red"
+        app:bv_power_margin="1dp"
+        app:bv_power_max="100"
+        app:bv_power_percent="20"
+        app:bv_power_progress="50"
+        app:bv_power_rx="1dp"
+        app:bv_power_ry="1dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:onClick="refresh"
+        android:text="刷新电量" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:onClick="stop"
+        android:text="停止刷新" />
+
+</LinearLayout>

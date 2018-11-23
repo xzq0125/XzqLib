@@ -20,7 +20,8 @@
         <activity android:name=".common.CommonActivity" />
         <activity android:name=".biz.divider_linearlayout.DividerLinearLayoutActivity" />
         <activity android:name=".biz.drawable_text_view.DrawableTextViewActivity" />
-        <activity android:name=".biz.divider.DividerActivity"></activity>
+        <activity android:name=".biz.divider.DividerActivity" />
+        <activity android:name=".biz.battery.BatteryActivity"></activity>
     </application>
 
 </manifest>

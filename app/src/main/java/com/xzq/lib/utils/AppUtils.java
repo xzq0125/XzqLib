@@ -2,6 +2,8 @@ package com.xzq.lib.utils;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 
 /**
@@ -40,5 +42,22 @@ public class AppUtils {
         }
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
         context.startActivity(intent);
+    }
+
+    /**
+     * 获取App版本名称
+     *
+     * @param context Context
+     * @return App版本名称
+     */
+    public static String getAppVersionName(Context context) {
+        String packageName = context.getPackageName();
+        PackageManager pm = context.getPackageManager();
+        try {
+            PackageInfo pi = pm.getPackageInfo(packageName, 0);
+            return pi.versionName;
+        } catch (PackageManager.NameNotFoundException e) {
+            return null;
+        }
     }
 }

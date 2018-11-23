@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="BatteryView">
+        <attr name="bv_lid_width" format="dimension" />
+        <attr name="bv_lid_height" format="dimension" />
+        <attr name="bv_lid_margin_left" format="dimension" />
+        <attr name="bv_body_rx" format="dimension" />
+        <attr name="bv_body_ry" format="dimension" />
+        <attr name="bv_lid_rx" format="dimension" />
+        <attr name="bv_lid_ry" format="dimension" />
+        <attr name="bv_power_rx" format="dimension" />
+        <attr name="bv_power_ry" format="dimension" />
+        <attr name="bv_power_margin" format="dimension" />
+        <attr name="bv_body_color" format="color" />
+        <attr name="bv_lid_color" format="color" />
+        <attr name="bv_power_color" format="color" />
+        <attr name="bv_power_percent" format="integer" />
+        <attr name="bv_power_max" format="integer" />
+        <attr name="bv_power_progress" format="integer" />
+    </declare-styleable>
+
+</resources>
