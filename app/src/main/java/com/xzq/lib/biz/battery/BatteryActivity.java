@@ -22,7 +22,7 @@ public class BatteryActivity extends BaseActivity implements Runnable {
 
     @Override
     protected String getGithubUrl() {
-        return "https://github.com/xzq0125/XzqLib/tree/master/batteryview";
+        return "https://github.com/xzq0125/XzqLib/tree/master/battery";
     }
 
     BatteryView batteryView;
