@@ -41,12 +41,13 @@
 
 - Java代码
 ```
+  BatteryView batteryView = findViewById(R.id.batteryView);
   方式1
   //设置50%电量
   batteryView.setPower(50);
 
   方式2
-  //设置75%电量
+  //设置50%电量
     batteryView.setMax(100);
     batteryView.setProgress(50);
     或者
@@ -58,9 +59,9 @@
 ## 属性及方法说明
 xml布局属性|默认值|属性类型|对应方法|说明及使用
 ---|---|---|---|---
-app:bv_body_color|ffffff|color|void setBodyColor(@ColorInt int colorBody)|设置电池外观颜色
-app:bv_lid_color|ffffff|color|void setLidColor(@ColorInt int colorLid)|设置电池盖子颜色
-app:bv_power_color|167ff6|color|void setPowerColor(@ColorInt int colorPower)|设置电量颜色
+app:bv_body_color|#ffffff|color|void setBodyColor(@ColorInt int colorBody)|设置电池外观颜色
+app:bv_lid_color|#ffffff|color|void setLidColor(@ColorInt int colorLid)|设置电池盖子颜色
+app:bv_power_color|#167ff6|color|void setPowerColor(@ColorInt int colorPower)|设置电量颜色
 app:bv_body_rx|0.5dp|dimen|无|设置电池外观圆角，椭圆的x半径（上下边的半径）
 app:bv_body_ry|0.5dp|dimen|无|设置电池外观圆角，椭圆的y半径（左右边的半径）
 app:bv_lid_rx|0.5dp|dimen|无|设置电池盖子圆角，椭圆的x半径（上下边的半径）
