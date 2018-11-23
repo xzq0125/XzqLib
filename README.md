@@ -19,7 +19,12 @@
 
 一行代码搞定RecyclerView的分割线
 
-[3]: https://github.com/xzq0125/XzqLib/tree/master/divider
+
+- ***[Divider][4]***
+
+电池电量显示控件
+
+[4]: https://github.com/xzq0125/XzqLib/tree/master/batteryview
 
 
 工具
