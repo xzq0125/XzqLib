@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
 
-import com.xzq.battery.BatteryView;
+import com.xzq.batteryview.BatteryView;
 import com.xzq.lib.R;
 import com.xzq.lib.base.BaseActivity;
 
