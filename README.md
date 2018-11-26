@@ -26,7 +26,7 @@
 
 电池电量显示控件
 
-[4]: https://github.com/xzq0125/XzqLib/tree/master/battery
+[4]: https://github.com/xzq0125/XzqLib/tree/master/batteryview
 
 
 工具

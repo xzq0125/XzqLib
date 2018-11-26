@@ -3,7 +3,7 @@
 ## 电池电量显示控件
 
 ## 效果图
-![Screenshots](https://github.com/xzq0125/XzqLib/blob/master/battery/batteryview.gif)
+![Screenshots](https://github.com/xzq0125/XzqLib/blob/master/batteryview/batteryview.gif)
 
 ## 引用（暂不支持）
 
