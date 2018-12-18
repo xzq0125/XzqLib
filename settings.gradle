@@ -1,1 +1,1 @@
-include ':app', ':dividerlinearlayout', ':drawabletextview', ':divider', ':xtimber', ':batteryview'
+include ':app', ':dividerlinearlayout', ':drawabletextview', ':divider', ':xtimber', ':batteryview', ':baseadapter'
