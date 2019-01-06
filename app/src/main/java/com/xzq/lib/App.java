@@ -19,6 +19,9 @@ public class App extends Application {
         super.onCreate();
         INSTANCE = this;
 
+        // 自己的异常处理
+        Thread.setDefaultUncaughtExceptionHandler(new AppExceptionHandler());
+
         //Log start
         XTimber.plant(new XTimber.DebugTree() {
             /**
