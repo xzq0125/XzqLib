@@ -8,6 +8,7 @@ import com.xzq.lib.biz.battery.BatteryActivity;
 import com.xzq.lib.biz.divider.DividerActivity;
 import com.xzq.lib.biz.divider_linearlayout.DividerLinearLayoutActivity;
 import com.xzq.lib.biz.drawable_text_view.DrawableTextViewActivity;
+import com.xzq.lib.biz.picker.PickerActivity;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -68,6 +69,7 @@ public class ItemList {
         itemList.add(new Item("DrawableTextView", DrawableTextViewActivity.class));
         itemList.add(new Item("RecyclerView分割线", DividerActivity.class));
         itemList.add(new Item("电池电量显示控件", BatteryActivity.class));
+        itemList.add(new Item("PickerView", PickerActivity.class));
     }
 
 }
