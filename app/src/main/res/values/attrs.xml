@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="OptionsPicker">
+        <attr name="hasTarget" format="boolean" />
+        <attr name="targetText" format="string" />
+    </declare-styleable>
+
+</resources>
