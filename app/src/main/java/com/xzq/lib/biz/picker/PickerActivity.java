@@ -29,9 +29,9 @@ public class PickerActivity extends BaseActivity {
         wheelView.setDividerType(WheelView.DividerType.WRAP);
         wheelView.setIsOptions(true);
        // wheelView.setTotalScrollY(500);
-        wheelView.setLabel("lab");
+       // wheelView.setLabel("lab");
         wheelView.setLineSpacingMultiplier(2f);
-        wheelView.setTextColorCenter(0xFFffd015);
+       // wheelView.setTextColorCenter(0xFFffd015);
        // wheelView.setTextColorOut(0xFFffd015);
         wheelView.setGravity(Gravity.CENTER);
         wheelView.setTextSize(24f);
