@@ -1,4 +1,4 @@
-package com.xzq.battery;
+package com.xzq.batteryview;
 
 import android.content.Context;
 import android.content.res.TypedArray;

@@ -9,7 +9,8 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/battery" />
+            <option value="$PROJECT_DIR$/baseadapter" />
+            <option value="$PROJECT_DIR$/batteryview" />
             <option value="$PROJECT_DIR$/divider" />
             <option value="$PROJECT_DIR$/dividerlinearlayout" />
             <option value="$PROJECT_DIR$/drawabletextview" />

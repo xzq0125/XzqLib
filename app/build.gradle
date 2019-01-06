@@ -30,5 +30,5 @@ dependencies {
     implementation project(':drawabletextview')
     implementation project(':divider')
     implementation project(':xtimber')
-    implementation project(':battery')
+    implementation project(':batteryview')
 }
