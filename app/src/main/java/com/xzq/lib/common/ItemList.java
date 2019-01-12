@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.support.annotation.LayoutRes;
 
 import com.xzq.lib.biz.battery.BatteryActivity;
+import com.xzq.lib.biz.camera.MainActivity2;
 import com.xzq.lib.biz.divider.DividerActivity;
 import com.xzq.lib.biz.divider_linearlayout.DividerLinearLayoutActivity;
 import com.xzq.lib.biz.drawable_text_view.DrawableTextViewActivity;
@@ -70,6 +71,7 @@ public class ItemList {
         itemList.add(new Item("RecyclerView分割线", DividerActivity.class));
         itemList.add(new Item("电池电量显示控件", BatteryActivity.class));
         itemList.add(new Item("PickerView", PickerActivity.class));
+        itemList.add(new Item("MainActivity2", MainActivity2.class));
     }
 
 }

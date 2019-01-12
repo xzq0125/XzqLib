@@ -33,4 +33,5 @@ dependencies {
     implementation project(':divider')
     implementation project(':xtimber')
     implementation project(':batteryview')
+    implementation project(':camera')
 }

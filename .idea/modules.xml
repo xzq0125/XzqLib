@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/baseadapter/baseadapter.iml" filepath="$PROJECT_DIR$/baseadapter/baseadapter.iml" />
       <module fileurl="file://$PROJECT_DIR$/batteryview/batteryview.iml" filepath="$PROJECT_DIR$/batteryview/batteryview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/camera/camera.iml" filepath="$PROJECT_DIR$/camera/camera.iml" />
       <module fileurl="file://$PROJECT_DIR$/divider/divider.iml" filepath="$PROJECT_DIR$/divider/divider.iml" />
       <module fileurl="file://$PROJECT_DIR$/dividerlinearlayout/dividerlinearlayout.iml" filepath="$PROJECT_DIR$/dividerlinearlayout/dividerlinearlayout.iml" />
       <module fileurl="file://$PROJECT_DIR$/drawabletextview/drawabletextview.iml" filepath="$PROJECT_DIR$/drawabletextview/drawabletextview.iml" />
