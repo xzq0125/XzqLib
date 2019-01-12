@@ -2,7 +2,6 @@ package com.cjt2325.cameralibrary;
 
 import android.content.Context;
 import android.graphics.Canvas;
-import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.RectF;
@@ -68,7 +67,8 @@ public class TypeButton extends View{
             mPaint.setStyle(Paint.Style.FILL);
             canvas.drawCircle(center_X, center_Y, button_radius, mPaint);
 
-            mPaint.setColor(Color.BLACK);
+            //mPaint.setColor(Color.BLACK);
+            mPaint.setColor(0xFFffd015);
             mPaint.setStyle(Paint.Style.STROKE);
             mPaint.setStrokeWidth(strokeWidth);
 
@@ -90,12 +90,12 @@ public class TypeButton extends View{
         //如果类型为确认，则绘制绿色勾
         if (button_type == TYPE_CONFIRM) {
             mPaint.setAntiAlias(true);
-            mPaint.setColor(0xFFFFFFFF);
+            mPaint.setColor(0xEEDCDCDC);
             mPaint.setStyle(Paint.Style.FILL);
             canvas.drawCircle(center_X, center_Y, button_radius, mPaint);
             mPaint.setAntiAlias(true);
             mPaint.setStyle(Paint.Style.STROKE);
-            mPaint.setColor(0xFF00CC00);
+            mPaint.setColor(0xFFffd015);
             mPaint.setStrokeWidth(strokeWidth);
 
             path.moveTo(center_X - button_size / 6f, center_Y);

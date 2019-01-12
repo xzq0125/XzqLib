@@ -40,7 +40,7 @@ public class CaptureButton extends View {
     public static final int STATE_RECORDERING = 0x004; //录制状态
     public static final int STATE_BAN = 0x005;         //禁止状态
 
-    private int progress_color = 0xEE16AE16;            //进度条颜色
+    private int progress_color = 0xEEffd015;            //进度条颜色
     private int outside_color = 0xEEDCDCDC;             //外圆背景色
     private int inside_color = 0xFFFFFFFF;              //内圆背景色
 
@@ -74,6 +74,8 @@ public class CaptureButton extends View {
     private CaptureListener captureLisenter;        //按钮回调接口
     private RecordCountDownTimer timer;             //计时器
 
+    private float insideOfOutside = .6f;//内圆半径是外圆半径的0.6倍
+
     public CaptureButton(Context context) {
         super(context);
     }
@@ -84,11 +86,14 @@ public class CaptureButton extends View {
         button_radius = size / 2.0f;
 
         button_outside_radius = button_radius;
-        button_inside_radius = button_radius * 0.75f;
+        button_inside_radius = button_radius * insideOfOutside;
 
-        strokeWidth = size / 15;
-        outside_add_size = size / 5;
-        inside_reduce_size = size / 8;
+        strokeWidth = size / 30;
+
+        //设置按钮按下外圆放大size
+        //outside_add_size = size / 5;
+        //设置按钮按下内圆缩小size
+        //inside_reduce_size = size / 8;
 
         mPaint = new Paint();
         mPaint.setAntiAlias(true);
@@ -154,7 +159,7 @@ public class CaptureButton extends View {
 
                 //判断按钮状态是否为可录制状态
                 if ((button_state == BUTTON_STATE_ONLY_RECORDER || button_state == BUTTON_STATE_BOTH))
-                    postDelayed(longPressRunnable, 500);    //同时延长500启动长按后处理的逻辑Runnable
+                    postDelayed(longPressRunnable, 100);    //同时延长500启动长按后处理的逻辑Runnable
                 break;
             case MotionEvent.ACTION_MOVE:
                 if (captureLisenter != null
@@ -215,7 +220,7 @@ public class CaptureButton extends View {
                 button_outside_radius,
                 button_radius,
                 button_inside_radius,
-                button_radius * 0.75f
+                button_radius * insideOfOutside
         );
     }
 
