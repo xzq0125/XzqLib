@@ -159,7 +159,7 @@ public class CaptureButton extends View {
 
                 //判断按钮状态是否为可录制状态
                 if ((button_state == BUTTON_STATE_ONLY_RECORDER || button_state == BUTTON_STATE_BOTH))
-                    postDelayed(longPressRunnable, 100);    //同时延长500启动长按后处理的逻辑Runnable
+                    postDelayed(longPressRunnable, 200);    //同时延长500启动长按后处理的逻辑Runnable
                 break;
             case MotionEvent.ACTION_MOVE:
                 if (captureLisenter != null
@@ -186,7 +186,10 @@ public class CaptureButton extends View {
             case STATE_PRESS:
                 if (captureLisenter != null && (button_state == BUTTON_STATE_ONLY_CAPTURE || button_state ==
                         BUTTON_STATE_BOTH)) {
-                    startCaptureAnimation(button_inside_radius);
+                    //回调拍照接口
+                    captureLisenter.takePictures();
+                    state = STATE_BAN;
+                    //startCaptureAnimation(button_inside_radius);
                 } else {
                     state = STATE_IDLE;
                 }
@@ -216,12 +219,12 @@ public class CaptureButton extends View {
         progress = 0;       //重制进度
         invalidate();
         //还原按钮初始状态动画
-        startRecordAnimation(
-                button_outside_radius,
-                button_radius,
-                button_inside_radius,
-                button_radius * insideOfOutside
-        );
+//        startRecordAnimation(
+//                button_outside_radius,
+//                button_radius,
+//                button_inside_radius,
+//                button_radius * insideOfOutside
+//        );
     }
 
     //内圆动画
@@ -326,13 +329,20 @@ public class CaptureButton extends View {
                     return;
                 }
             }
+            //设置为录制状态
+            if (state == STATE_LONG_PRESS) {
+                if (captureLisenter != null)
+                    captureLisenter.recordStart();
+                state = STATE_RECORDERING;
+                timer.start();
+            }
             //启动按钮动画，外圆变大，内圆缩小
-            startRecordAnimation(
-                    button_outside_radius,
-                    button_outside_radius + outside_add_size,
-                    button_inside_radius,
-                    button_inside_radius - inside_reduce_size
-            );
+//            startRecordAnimation(
+//                    button_outside_radius,
+//                    button_outside_radius + outside_add_size,
+//                    button_inside_radius,
+//                    button_inside_radius - inside_reduce_size
+//            );
         }
     }
 

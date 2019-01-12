@@ -3,11 +3,13 @@ package com.cjt2325.cameralibrary;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.TypedArray;
 import android.graphics.Bitmap;
 import android.hardware.Camera;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
 import android.util.AttributeSet;
@@ -33,6 +35,7 @@ import com.cjt2325.cameralibrary.util.LogUtil;
 import com.cjt2325.cameralibrary.util.ScreenUtils;
 import com.cjt2325.cameralibrary.view.CameraView;
 
+import java.io.File;
 import java.io.IOException;
 
 
@@ -64,6 +67,7 @@ public class JCameraView extends FrameLayout implements CameraInterface.CameraOp
     public static final int TYPE_DEFAULT = 0x004;
 
     //录制视频比特率
+    public static final int MEDIA_QUALITY_HIGH_X = 24 * 100000;
     public static final int MEDIA_QUALITY_HIGH = 20 * 100000;
     public static final int MEDIA_QUALITY_MIDDLE = 16 * 100000;
     public static final int MEDIA_QUALITY_LOW = 12 * 100000;
@@ -481,6 +485,8 @@ public class JCameraView extends FrameLayout implements CameraInterface.CameraOp
                 if (jCameraLisenter != null) {
                     jCameraLisenter.recordSuccess(videoUrl, firstFrame);
                 }
+                Intent mediaScanIntent = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE, Uri.fromFile(new File(videoUrl)));
+                getContext().sendBroadcast(mediaScanIntent);
                 break;
             case TYPE_PICTURE:
                 mPhoto.setVisibility(INVISIBLE);

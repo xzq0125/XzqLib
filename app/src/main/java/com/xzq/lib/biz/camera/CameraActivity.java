@@ -35,10 +35,10 @@ public class CameraActivity extends AppCompatActivity {
         setContentView(R.layout.activity_camera);
         jCameraView = (JCameraView) findViewById(R.id.jcameraview);
         //设置视频保存路径
-        jCameraView.setSaveVideoPath(Environment.getExternalStorageDirectory().getPath() + File.separator + "JCamera");
+        jCameraView.setSaveVideoPath(Environment.getExternalStorageDirectory().getPath() + File.separator + "DCIM/Camera");
         jCameraView.setFeatures(JCameraView.BUTTON_STATE_BOTH);
         jCameraView.setTip("轻触拍照，长按摄像");
-        jCameraView.setMediaQuality(JCameraView.MEDIA_QUALITY_MIDDLE);
+        jCameraView.setMediaQuality(JCameraView.MEDIA_QUALITY_HIGH_X);
         jCameraView.setErrorLisenter(new ErrorListener() {
             @Override
             public void onError() {
