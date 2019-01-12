@@ -109,6 +109,7 @@ public class JCameraView extends FrameLayout implements CameraInterface.CameraOp
     private int iconLeft = 0;       //左图标
     private int iconRight = 0;      //右图标
     private int duration = 0;       //录制时间
+    private boolean openFlashLight = false;//是否打开闪光灯
 
     //缩放梯度
     private int zoomGradient = 0;
@@ -133,11 +134,12 @@ public class JCameraView extends FrameLayout implements CameraInterface.CameraOp
                 TypedValue.COMPLEX_UNIT_SP, 35, getResources().getDisplayMetrics()));
         iconMargin = a.getDimensionPixelSize(R.styleable.JCameraView_iconMargin, (int) TypedValue.applyDimension(
                 TypedValue.COMPLEX_UNIT_SP, 15, getResources().getDisplayMetrics()));
-        iconBack = a.getResourceId(R.styleable.JCameraView_iconBack, R.drawable.ic_back);
+        iconBack = a.getResourceId(R.styleable.JCameraView_iconBack, 0);
         iconSrc = a.getResourceId(R.styleable.JCameraView_iconSrc, R.drawable.ic_camera);
         iconLeft = a.getResourceId(R.styleable.JCameraView_iconLeft, 0);
         iconRight = a.getResourceId(R.styleable.JCameraView_iconRight, 0);
         duration = a.getInteger(R.styleable.JCameraView_duration_max, 10 * 1000);       //没设置默认为10s
+        openFlashLight = a.getBoolean(R.styleable.JCameraView_openFlashLight, openFlashLight);
         a.recycle();
         initData();
         initView();
@@ -157,28 +159,37 @@ public class JCameraView extends FrameLayout implements CameraInterface.CameraOp
         mVideoView = (VideoView) view.findViewById(R.id.video_preview);
         mPhoto = (ImageView) view.findViewById(R.id.image_photo);
         mBack = (ImageView) view.findViewById(R.id.image_back);
-        mBack.setImageResource(iconBack);
-        mBack.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (leftClickListener != null) {
-                    leftClickListener.onClick();
+        if (iconBack > 0) {
+            mBack.setImageResource(iconBack);
+            mBack.setOnClickListener(new OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (leftClickListener != null) {
+                        leftClickListener.onClick();
+                    }
                 }
-            }
-        });
+            });
+        } else {
+            mBack.setVisibility(GONE);
+        }
         mSwitchCamera = (ImageView) view.findViewById(R.id.image_switch);
         mSwitchCamera.setImageResource(iconSrc);
         mFlashLamp = (ImageView) view.findViewById(R.id.image_flash);
-        setFlashRes();
-        mFlashLamp.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                type_flash++;
-                if (type_flash > 0x023)
-                    type_flash = TYPE_FLASH_AUTO;
-                setFlashRes();
-            }
-        });
+        if (openFlashLight) {
+            setFlashRes();
+            mFlashLamp.setOnClickListener(new OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    type_flash++;
+                    if (type_flash > 0x023)
+                        type_flash = TYPE_FLASH_AUTO;
+                    setFlashRes();
+                }
+            });
+        } else {
+            mFlashLamp.setVisibility(INVISIBLE);
+        }
+
         mCaptureLayout = (CaptureLayout) view.findViewById(R.id.capture_layout);
         mCaptureLayout.setDuration(duration);
         mCaptureLayout.setIconSrc(iconLeft, iconRight);
@@ -195,15 +206,19 @@ public class JCameraView extends FrameLayout implements CameraInterface.CameraOp
         mCaptureLayout.setCaptureLisenter(new CaptureListener() {
             @Override
             public void takePictures() {
+                mFoucsView.setVisibility(INVISIBLE);
                 mSwitchCamera.setVisibility(INVISIBLE);
-                mFlashLamp.setVisibility(INVISIBLE);
+                if (openFlashLight)
+                    mFlashLamp.setVisibility(INVISIBLE);
                 machine.capture();
             }
 
             @Override
             public void recordStart() {
+                mFoucsView.setVisibility(INVISIBLE);
                 mSwitchCamera.setVisibility(INVISIBLE);
-                mFlashLamp.setVisibility(INVISIBLE);
+                if (openFlashLight)
+                    mFlashLamp.setVisibility(INVISIBLE);
                 machine.record(mVideoView.getHolder().getSurface(), screenProp);
             }
 
@@ -211,7 +226,8 @@ public class JCameraView extends FrameLayout implements CameraInterface.CameraOp
             public void recordShort(final long time) {
                 mCaptureLayout.setTextWithAnimation("录制时间过短");
                 mSwitchCamera.setVisibility(VISIBLE);
-                mFlashLamp.setVisibility(VISIBLE);
+                if (openFlashLight)
+                    mFlashLamp.setVisibility(VISIBLE);
                 postDelayed(new Runnable() {
                     @Override
                     public void run() {
@@ -450,7 +466,8 @@ public class JCameraView extends FrameLayout implements CameraInterface.CameraOp
                 break;
         }
         mSwitchCamera.setVisibility(VISIBLE);
-        mFlashLamp.setVisibility(VISIBLE);
+        if (openFlashLight)
+            mFlashLamp.setVisibility(VISIBLE);
         mCaptureLayout.resetCaptureLayout();
     }
 
