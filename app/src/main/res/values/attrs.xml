@@ -5,5 +5,21 @@
         <attr name="hasTarget" format="boolean" />
         <attr name="targetText" format="string" />
     </declare-styleable>
-
+    <declare-styleable name="CircularRippleButton">
+        <attr name="crb_ripple_width" format="dimension" />
+        <attr name="crb_ripple_color" format="color" />
+        <attr name="crb_text_size" format="dimension" />
+        <attr name="crb_text" format="integer" />
+        <attr name="crb_text_color" format="color" />
+    </declare-styleable>
+    <declare-styleable name="RecordButton">
+        <attr name="rb_padding" format="dimension" />
+        <attr name="rb_progress_color" format="color" />
+        <attr name="rb_progress_width" format="dimension" />
+        <attr name="rb_ripple_color" format="color" />
+        <attr name="rb_ripple_width" format="dimension" />
+        <attr name="rb_record_duration" format="integer" />
+        <attr name="rb_record_min_duration" format="integer" />
+        <attr name="rb_ripple_gap" format="dimension" />
+    </declare-styleable>
 </resources>
