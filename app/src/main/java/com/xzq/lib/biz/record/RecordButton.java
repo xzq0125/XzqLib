@@ -144,6 +144,8 @@ public class RecordButton extends android.support.v7.widget.AppCompatImageView {
                 canRecord = false;
                 isRecording = true;
                 postDelayed(runnable, min_duration);
+                MyAudioRecorder.getRecorder().startRecord();
+
                 return true;
             case MotionEvent.ACTION_UP:
                 LogUtils.debug(TAG, "抬起");
@@ -156,6 +158,7 @@ public class RecordButton extends android.support.v7.widget.AppCompatImageView {
                 rippleSecondRadius = 0;
                 invalidate();
                 timer.cancel();
+                MyAudioRecorder.getRecorder().stopRecord();
                 LogUtils.debug(TAG, "录制结束");
                 return true;
         }
@@ -199,6 +202,7 @@ public class RecordButton extends android.support.v7.widget.AppCompatImageView {
             cancel();
             updateProgress(0);
             LogUtils.debug(TAG, "录制结束");
+            MyAudioRecorder.getRecorder().stopRecord();
         }
     }
 
