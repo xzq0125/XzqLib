@@ -35,7 +35,8 @@
         <activity android:name=".biz.picker.PickerActivity" />
         <activity android:name=".biz.camera.CameraActivity" />
         <activity android:name=".biz.camera.MainActivity2" />
-        <activity android:name=".biz.record.RecordActivity"></activity>
+        <activity android:name=".biz.record.RecordActivity" />
+        <activity android:name=".biz.pullupdown.ViewGroupDragActivity"></activity>
     </application>
 
 </manifest>

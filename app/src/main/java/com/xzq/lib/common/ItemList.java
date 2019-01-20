@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.LayoutRes;
 
+import com.xzq.lib.biz.pullupdown.ViewGroupDragActivity;
 import com.xzq.lib.biz.battery.BatteryActivity;
 import com.xzq.lib.biz.camera.MainActivity2;
 import com.xzq.lib.biz.divider.DividerActivity;
@@ -74,6 +75,7 @@ public class ItemList {
         itemList.add(new Item("PickerView", PickerActivity.class));
         itemList.add(new Item("相机", MainActivity2.class));
         itemList.add(new Item("录音", RecordActivity.class));
+        itemList.add(new Item("下拉关闭", ViewGroupDragActivity.class));
     }
 
 }

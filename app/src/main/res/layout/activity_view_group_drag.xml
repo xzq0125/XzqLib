@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.xzq.lib.biz.pullupdown.ViewGroupDragActivity">
+
+    <include layout="@layout/layout_toolbar" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            tools:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="第一个View"
+                android:textColor="@color/white"
+                android:textSize="33sp" />
+
+        </FrameLayout>
+
+        <com.xzq.lib.biz.pullupdown.PullDownCloseView
+            android:id="@+id/vg2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="39dp"
+                android:background="@color/white"
+                android:gravity="center|start"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="头部" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="39dp"
+                android:background="@color/color_divider" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="40dp"
+                android:background="@color/white" />
+
+        </com.xzq.lib.biz.pullupdown.PullDownCloseView>
+
+    </FrameLayout>
+
+</LinearLayout>
