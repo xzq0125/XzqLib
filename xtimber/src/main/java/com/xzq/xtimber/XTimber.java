@@ -50,6 +50,21 @@ public class XTimber {
     }
 
     /**
+     * Log a debug message with optional format args.
+     */
+    public static void debug(String tag, String message, Object... args) {
+        tag(tag);
+        TREE_OF_SOULS.d(message, args);
+    }
+
+    /**
+     * Log a debug message with optional format args.
+     */
+    public static void debug(String message, Object... args) {
+        TREE_OF_SOULS.d(message, args);
+    }
+
+    /**
      * Log a debug exception and a message with optional format args.
      */
     public static void d(Throwable t, String message, Object... args) {

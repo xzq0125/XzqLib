@@ -177,4 +177,15 @@ public class LogUtils {
         }
     }
 
+    /**
+     * 打印调试日志，正式版自动关闭
+     *
+     * @param msg 消息
+     */
+    public static void debugXzq(String msg) {
+        if (BuildConfig.DEBUG) {
+            log("XZQLOG", msg, Log.DEBUG);
+        }
+    }
+
 }

@@ -4,13 +4,14 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.LayoutRes;
 
-import com.xzq.lib.biz.pullupdown.ViewGroupDragActivity;
+import com.xzq.lib.biz.adapt.AdaptScreenActivity;
 import com.xzq.lib.biz.battery.BatteryActivity;
 import com.xzq.lib.biz.camera.MainActivity2;
 import com.xzq.lib.biz.divider.DividerActivity;
 import com.xzq.lib.biz.divider_linearlayout.DividerLinearLayoutActivity;
 import com.xzq.lib.biz.drawable_text_view.DrawableTextViewActivity;
 import com.xzq.lib.biz.picker.PickerActivity;
+import com.xzq.lib.biz.pullupdown.ViewGroupDragActivity;
 import com.xzq.lib.biz.record.RecordActivity;
 
 import java.util.ArrayList;
@@ -76,6 +77,7 @@ public class ItemList {
         itemList.add(new Item("相机", MainActivity2.class));
         itemList.add(new Item("录音", RecordActivity.class));
         itemList.add(new Item("下拉关闭", ViewGroupDragActivity.class));
+        itemList.add(new Item("屏幕适配", AdaptScreenActivity.class));
     }
 
 }
