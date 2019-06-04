@@ -36,4 +36,5 @@ dependencies {
     implementation project(':camera')
     //工具类
     implementation 'com.blankj:utilcode:1.23.7'
+    implementation project(':baseadapter')
 }
