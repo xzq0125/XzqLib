@@ -37,7 +37,8 @@
         <activity android:name=".biz.camera.MainActivity2" />
         <activity android:name=".biz.record.RecordActivity" />
         <activity android:name=".biz.pullupdown.ViewGroupDragActivity" />
-        <activity android:name=".biz.adapt.AdaptScreenActivity"></activity>
+        <activity android:name=".biz.adapt.AdaptScreenActivity" />
+        <activity android:name=".biz.cardview.CardViewActivity" />
     </application>
 
 </manifest>
