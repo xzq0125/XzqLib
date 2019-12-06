@@ -8,7 +8,6 @@ import com.xzq.lib.biz.adapt.AdaptScreenActivity;
 import com.xzq.lib.biz.battery.BatteryActivity;
 import com.xzq.lib.biz.book.BookActivity;
 import com.xzq.lib.biz.camera.MainActivity2;
-import com.xzq.lib.biz.cardview.CardViewActivity;
 import com.xzq.lib.biz.divider.DividerActivity;
 import com.xzq.lib.biz.divider_linearlayout.DividerLinearLayoutActivity;
 import com.xzq.lib.biz.drawable_text_view.DrawableTextViewActivity;
@@ -82,7 +81,7 @@ public class ItemList {
         itemList.add(new Item("下拉关闭", ViewGroupDragActivity.class));
         itemList.add(new Item("屏幕适配", AdaptScreenActivity.class));
         itemList.add(new Item("GirdRvActivity", GirdRvActivity.class));
-        itemList.add(new Item("CardViewActivity", CardViewActivity.class));
+//        itemList.add(new Item("CardViewActivity", CardViewActivity.class));
         itemList.add(new Item("翻书控件", BookActivity.class));
     }
 
