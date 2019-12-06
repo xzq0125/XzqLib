@@ -39,6 +39,7 @@
         <activity android:name=".biz.pullupdown.ViewGroupDragActivity" />
         <activity android:name=".biz.adapt.AdaptScreenActivity" />
         <activity android:name=".biz.cardview.CardViewActivity" />
+        <activity android:name=".biz.book.BookActivity" />
     </application>
 
 </manifest>
