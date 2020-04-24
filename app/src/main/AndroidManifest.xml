@@ -20,8 +20,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".biz.girdrv.GirdRvActivity"></activity>
-        <activity android:name=".biz.girdrv.DyGirdRvActivity"></activity>
+        <activity android:name=".biz.anr.AnrActivity"></activity>
+        <activity android:name=".biz.girdrv.GirdRvActivity" />
+        <activity android:name=".biz.girdrv.DyGirdRvActivity" />
         <activity android:name=".main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.support.annotation.LayoutRes;
 
 import com.xzq.lib.biz.adapt.AdaptScreenActivity;
+import com.xzq.lib.biz.anr.AnrActivity;
 import com.xzq.lib.biz.battery.BatteryActivity;
 import com.xzq.lib.biz.book.BookActivity;
 import com.xzq.lib.biz.camera.MainActivity2;
@@ -85,6 +86,7 @@ public class ItemList {
         itemList.add(new Item("DyGirdRvActivity", DyGirdRvActivity.class));
 //        itemList.add(new Item("CardViewActivity", CardViewActivity.class));
         itemList.add(new Item("翻书控件", BookActivity.class));
+        itemList.add(new Item("ANR定位", AnrActivity.class));
     }
 
 }
